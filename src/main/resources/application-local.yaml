@@ -1,0 +1,21 @@
+spring:
+  application.name: challenge
+  datasource:
+    url: jdbc:postgresql://localhost:5432/challenge
+    username: challenge
+    password: test
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    locations:
+      - classpath:db/migration
+    baseline-on-migrate: true
+    enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbit
+    password: carrot
+logging.level:
+  de.krieger: DEBUG
+server:
+  port: 8080
